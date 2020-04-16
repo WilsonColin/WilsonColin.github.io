@@ -9,8 +9,7 @@
   <body>
     {{ content}}
     <footer class="footer">
-	    {% if site.footer-links.github %}<a href="https://github.com/{{ site.footer-links.github }}">{% include svg-icons/github.html %}</a>{% endif%}
-	    {% if site.footer-links.linkedin %}<a href="https://linkedin.com/in/{{ site.footer-links.linkedin }}">{% include svg-icons/linkedin.html %}</a>{% endif %}
+	    {% include svg-icons.html %}
     </footer>
   </body>
 </html>
