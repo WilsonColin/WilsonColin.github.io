@@ -3,6 +3,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Wilson Colin Design"
 
 # Include icons in the footer for each username enter
-footer-link:
+footer-links:
         github: WilsonColin
         linkedin: techwilsoncolin

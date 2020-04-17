@@ -4,12 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
   </head>
   <body>
     {{ content}}
     <footer class="footer">
-	    <p>Posted by: Wilson Colin</p>
 	    {% include svg-icons.html %}
     </footer>
   </body>
