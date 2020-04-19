@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+{% assign _pages = site.pages | sort: 'order' %}
+{% include header.html nav_list=_pages %}
+{{ content }}

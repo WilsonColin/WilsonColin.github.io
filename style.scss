@@ -4,3 +4,76 @@
 // Imports
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css";
 @import "svg-icons";
+
+.header {
+	padding: 20px
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 40px
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    padding: 0
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header_content {
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 40px 135px
+  }
+}
+
+.header_logo {
+  display: block;
+  width: 200px;
+  max-width: 80%
+}
+
+@media only screen and (min-width: 768px){
+  .header_logo {
+    float: left;
+    max-width: 50%
+  }
+}
+
+.header_logo_image {
+  width: 100%;
+  height: auto
+}
+
+.menu_toggle {
+  position: absolute;
+  z-index: 1002;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 20px;
+  color: #2A2F36
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu_toggle {
+    display: none
+  }
+}
+
+.menu_toggle_icon {
+  float: right;
+  position: relative;
+  width: 24px;
+  height: 20px;
+  margin-left: 8px
+}
