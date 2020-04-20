@@ -2,6 +2,23 @@
 layout: default
 ---
 
-{% assign _pages = site.pages | sort: 'order' %}
-{% include header.html nav_list=_pages %}
-{{ content }}
+<div class="topnav">
+  <a href="#home" class="logo">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+    {{ content }}
+</div>
