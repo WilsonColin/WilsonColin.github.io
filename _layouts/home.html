@@ -3,7 +3,9 @@ layout: default
 ---
 
 <div class="topnav">
-  <a href="#home" class="logo">Home</a>
+  <a href="/">
+    <img src="images/logo.png" alt="Colin Wilson Design" width="200">
+  </a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
@@ -13,12 +15,22 @@ layout: default
 </div>
 
 <div class="sidenav">
-  <a href="#about">About</a>
+  <a href="/" class="logo">
+    <img src="images/logo.png" alt="Colin Wilson Design">
+  </a>
+  {%- for _item in site.collections -%}
+    {%- unless _item == null -%}
+      {%- unless _item.label == "posts" -%}
+        {%- assign _title = _item.label -%}
+        <a href="#{{- _title -}}">{{- _title -}}</a>
+      {%- endunless -%}
+    {%- endunless -%}
+  {%- endfor -%}
   <a href="#services">Services</a>
   <a href="#clients">Clients</a>
   <a href="#contact">Contact</a>
 </div>
 
 <div class="main">
-    {{ content }}
+  {{ content }}
 </div>

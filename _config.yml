@@ -2,6 +2,10 @@ url: "https://wilsoncolin.github.io"
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Wilson Colin Design"
 
+collections:
+  projects:
+    output: true
+
 # Include icons in the footer for each username enter
 footer-links:
         github: WilsonColin
