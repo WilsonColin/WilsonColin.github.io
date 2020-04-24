@@ -3,20 +3,25 @@ layout: default
 ---
 
 <div class="topnav">
-  <a href="/">
-    <img src="images/logo.png" alt="Colin Wilson Design" width="200">
+  <a href="/" class="logo">
+    <img src="images/logo.png" alt="Colin Wilson Design">
   </a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon">
+  {%- for _item in site.collections reversed-%}
+    {%- unless _item == null -%}
+      {%- unless _item.label == "posts" -%}
+        {%- assign _title = _item.label -%}
+        <a href="#{{- _title -}}">{{- _title -}}</a>
+      {%- endunless -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  <a href="javascript:void(0);" class="icon">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 
 <div class="sidenav">
   <a href="/" class="logo">
-    <img src="images/logo.png" alt="Colin Wilson Design">
+    <img src="images/logo.png" class="image_sidenav" alt="Colin Wilson Design">
   </a>
   {%- for _item in site.collections -%}
     {%- unless _item == null -%}
@@ -26,9 +31,6 @@ layout: default
       {%- endunless -%}
     {%- endunless -%}
   {%- endfor -%}
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
 </div>
 
 <div class="main">

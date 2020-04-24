@@ -3,7 +3,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Wilson Colin Design"
 
 collections:
-  projects:
+  Projects:
+    output: true
+  Learnings:
+    output: true
+  About:
     output: true
 
 # Include icons in the footer for each username enter

@@ -7,17 +7,18 @@
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  height: 50px;
+  display: none;
 }
 
 .topnav a {
-  float: left;
-  display: none;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  display: inline-block;
+  float: right;
 }
 
 .topnav a:hover {
@@ -31,21 +32,28 @@
 }
 
 .topnav .icon {
+  float: right;
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a.logo{
-    float: left;
-    display: block;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+.topnav .logo {
+  float: left;
+  height: 100%;
+  width: auto;
+  padding: 5px;
 }
 
 @media screen and (max-width: 768px) {
+  .topnav{ 
+    display: block;
+  } 
+}
+
+@media screen and (max-width: 550px) {
+  .topnav a:not(.logo){display: none;}
+  .topnav a.icon{
+    display: block;
+  }
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -71,7 +79,7 @@
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 20px;
+  padding: 6px 8px 6px 40px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -82,11 +90,9 @@
   color: #f1f1f1;
 }
 
-.sidenav a.logo {
-  width: 100%;
+.sidenav .logo {
   float: left;
   padding: 20px 0px 100px 20px;
-  display: block
 }
 
 @media screen and (max-width: 768px) {
@@ -97,7 +103,34 @@
 .main {
   margin-left: 25%; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+  padding: 10px 10px;
+}
+
+.layout1 {
+  grid-column: span 3;
+  align-items: center;
+  background: #fff;
+  position:relative;
+  overflow:hidden;
+}
+
+.layout1 .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.4);
+  -webkit-transition: all 5s ease;
+  transition: all 0.6s ease;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.layout1:hover .mask {
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -107,7 +140,24 @@
 }
 
 img{
-  max-width: 100%;
   max-height: 100%;
   display: block;
+}
+
+.image_index{
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+  .main {
+    padding: 10px 0px;
+  }
+  .image_index {
+    border-radius: 0px;
+  }
+}
+
+.image_sidenav{
+  max-width: 100%;
 }

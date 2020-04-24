@@ -3,7 +3,17 @@ layout: home
 title: index
 ---
 
-<div class="container p-3 my-3 border">
-  <h1>Welcom to CW Design</h1>
-  <p>Under Construction</p>
-</div>
+{%- for _project in site.Projects -%}
+  {%- unless _project == null -%}
+    {%- if _project.priority == 1 -%}
+      {%- assign _image = _project.cover_image -%}
+      {%- assign _ti = _project.title -%}
+      <div class="layout1">
+        <img src="{{- _image -}}" class="image_index" alt="{{- _ti -}}">
+        <div class="mask">
+        </div>
+      </div>
+
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}
