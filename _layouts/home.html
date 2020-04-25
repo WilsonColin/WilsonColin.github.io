@@ -10,7 +10,7 @@ layout: default
     {%- unless _item == null -%}
       {%- unless _item.label == "posts" -%}
         {%- assign _title = _item.label -%}
-        <a href="#{{- _title -}}">{{- _title -}}</a>
+        <a href="{{- _title -}}.html">{{- _title -}}</a>
       {%- endunless -%}
     {%- endunless -%}
   {%- endfor -%}
@@ -27,7 +27,7 @@ layout: default
     {%- unless _item == null -%}
       {%- unless _item.label == "posts" -%}
         {%- assign _title = _item.label -%}
-        <a href="#{{- _title -}}">{{- _title -}}</a>
+        <a href="{{- _title -}}.html">{{- _title -}}</a>
       {%- endunless -%}
     {%- endunless -%}
   {%- endfor -%}
