@@ -9,16 +9,37 @@ body, html {
   margin: 0;
 }
 
+.button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
 .bg {
     /* The image used */
     background-image: url("images/Home_Background.png");
     height: 100%;
-    padding: 30px;
+    padding-top: 30px;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
+}
+
+.bg1 {
+  /* The image used */
+  background-image: url("images/profile.jpg");
+  height: 100%;
+  padding-top: 30px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
 }
 
 
