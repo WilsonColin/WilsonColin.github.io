@@ -4,6 +4,11 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css";
 @import "svg-icons";
 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .bg {
     /* The image used */
     background-image: url("images/chair.jpg");
