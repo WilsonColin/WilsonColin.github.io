@@ -15,7 +15,9 @@ body, html {
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 6px;
+  border-color: #707070;
+  padding: 5px 20px 5px 20px;
 }
 
 .bg {
@@ -32,7 +34,7 @@ body, html {
 
 .bg1 {
   /* The image used */
-  background-image: url("images/profile.jpg");
+  background-image: url("images/profile.jpeg");
   height: 100%;
   padding-top: 30px;
   /* Center and scale the image nicely */
@@ -40,6 +42,12 @@ body, html {
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
+}
+
+
+img{
+  min-width: 100%;
+  min-height: 100%;
 }
 
 
@@ -217,11 +225,6 @@ body, html {
   .main {
     margin-left: 0px; // Same as the width of the sidenav
   }
-}
-
-img{
-  max-height: 100%;
-  display: block;
 }
 
 .image_index{
