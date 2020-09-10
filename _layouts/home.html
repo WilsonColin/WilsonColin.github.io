@@ -3,34 +3,10 @@ layout: default
 ---
 
 <div class="topnav">
-  <a href="/" class="logo">
-    <img src="images/logo_light.png" alt="Colin Wilson Design">
-  </a>
-  {%- for _item in site.collections reversed-%}
-    {%- unless _item == null -%}
-      {%- unless _item.label == "posts" -%}
-        {%- assign _title = _item.label -%}
-        <a href="{{- _title -}}.html">{{- _title -}}</a>
-      {%- endunless -%}
-    {%- endunless -%}
-  {%- endfor -%}
-  <a href="javascript:void(0);" class="icon">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-<div class="sidenav">
-  <a href="/" class="logo">
-    <img src="images/logo.png" class="image_sidenav" alt="Colin Wilson Design">
-  </a>
-  {%- for _item in site.collections -%}
-    {%- unless _item == null -%}
-      {%- unless _item.label == "posts" -%}
-        {%- assign _title = _item.label -%}
-        <a href="{{- _title -}}.html">{{- _title -}}</a>
-      {%- endunless -%}
-    {%- endunless -%}
-  {%- endfor -%}
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Projects.html">Portfolio</a></li>
+  <li><a href="Learning.html">Learning</a></li>>
+  <li><a href="About.html">About</a></li>
 </div>
 
 <div class="main">
